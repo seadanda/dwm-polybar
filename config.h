@@ -67,20 +67,20 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2]         = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *mutecmd[]    = { "pulseaudio-ctl",   "mute",         NULL };
-static const char *voldowncmd[] = { "pulseaudio-ctl",   "down",         NULL };
-static const char *volupcmd[]   = { "pulseaudio-ctl",   "up",           NULL };
-static const char *plyrprev[]   = { "playerctl",        "previous",     NULL };
-static const char *plyrplay[]   = { "playerctl",        "play-pause",   NULL };
-static const char *plyrnext[]   = { "playerctl",        "next",         NULL };
-static const char *lockcmd[]    = { "i3lock-seadanda",                  NULL };
-static const char *dispcon[]    = { "disp",                             NULL };
-static const char *dispdiscon[] = { "dispr",                            NULL };
-static const char *brightup[]   = { "xbacklight",  "-inc",  "10",       NULL };
-static const char *brightdown[] = { "xbacklight",  "-dec",  "10",       NULL };
-static const char *screenshot[] = { "screenshot",                       NULL };
-static const char *kbtoggle[]   = { "kbtoggle",                         NULL };
-static const char *termcmd[]    = { "alacritty",                        NULL };
+static const char *mutecmd[]    = { "amixer", "set", "Master", "toggle", NULL };
+static const char *voldowncmd[] = { "amixer", "set", "Master", "10%+",   NULL };
+static const char *volupcmd[]   = { "amixer", "set", "Master", "10%-",   NULL };
+static const char *plyrprev[]   = { "playerctl",        "previous",      NULL };
+static const char *plyrplay[]   = { "playerctl",        "play-pause",    NULL };
+static const char *plyrnext[]   = { "playerctl",        "next",          NULL };
+static const char *lockcmd[]    = { "i3lock-seadanda",                   NULL };
+static const char *dispcon[]    = { "disp",                              NULL };
+static const char *dispdiscon[] = { "dispr",                             NULL };
+static const char *brightup[]   = { "xbacklight",  "-inc",  "10",        NULL };
+static const char *brightdown[] = { "xbacklight",  "-dec",  "10",        NULL };
+static const char *screenshot[] = { "screenshot",                        NULL };
+static const char *kbtoggle[]   = { "kbtoggle",                          NULL };
+static const char *termcmd[]    = { "alacritty",                         NULL };
 static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 
 static Key keys[] = {
